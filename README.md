@@ -1,6 +1,6 @@
 # employee-directory
 
-This is a very simple website that takes a set of employees and allows the user to filter hose employees by department, and sort then by their salaries. This site was created using React and makes use of React states to filter and sort the employees.
+This is a very simple website that takes a set of employees and allows the user to filter those employees by department, and sort them by their salaries. This site was created using React and makes use of React states to filter and sort the employees.
 
 ## Usage
 
