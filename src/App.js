@@ -29,7 +29,7 @@ class App extends React.Component {
 
   changeSort = (e) => {
 
-    this.setState({ employees: employeesJson, sortSalary: e.target.value }, () => {
+    this.setState({ sortSalary: e.target.value }, () => {
       console.log(this.state)
 
       if (this.state.sortSalary === "Ascending") {
