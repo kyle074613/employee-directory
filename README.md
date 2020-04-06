@@ -4,7 +4,7 @@ This is a very simple website that takes a set of employees and allows the user 
 
 ## Usage
 
-All you have to do is go to https://kyle074613.github.io/employee-directory and play around!
+All you have to do is go to https://kyle074613.github.io/employee-directory/ and play around!
 
 ## Built With
 
