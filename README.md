@@ -8,7 +8,7 @@ All you have to do is go to https://kyle074613.github.io/employee-directory/ and
 
 ## Built With
 
-* [React](https://reactjs.org/) JavaScript library for building user interfaces.
+* [React](https://reactjs.org/) - JavaScript library for building user interfaces.
 
 ## License
 
