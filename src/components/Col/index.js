@@ -1,11 +1,15 @@
 import React from "react";
 
 function Col(props) {
-    const size = props.size.split(" ").map(size => "col-" + size).join(" ");
-    const fullClassName = size + ' ' + props.other;
+    let name;
+
+    if (props.format)
+        name = `col ${props.format}`
+    else
+        name = "col"
 
     return (
-        <div className={fullClassName} {...props}></div>
+        <div className={name} {...props}></div>
     );
 }
 

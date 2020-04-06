@@ -6,46 +6,60 @@ import employeesJson from './employees.json';
 import TableBody from './components/TableBody';
 import TableRow from './components/TableRow';
 import FilterDropDown from './components/FilterDropDown';
+import SortDropDown from './components/SortDropDown';
 
 class App extends React.Component {
 
   state = {
     employees: employeesJson,
     depFilter: "None",
-    sort: ""
+    sortSalary: "None"
   }
 
   changeDepartmentFilter = (e) => {
     this.setState({ employees: employeesJson, depFilter: e.target.value }, () => {
-      console.log(this.state)
       if (this.state.depFilter === "None") {
         return;
       }
-
       const employees = this.state.employees.filter(employee => employee.department === this.state.depFilter);
 
       this.setState({ employees: employees });
-    })
+    });
   }
 
   changeSort = (e) => {
 
+    this.setState({ employees: employeesJson, sortSalary: e.target.value }, () => {
+      console.log(this.state)
 
-    const employees = this.state.employees.sort(function (a, b) {
-      return a.salary - b.salary;
+      if (this.state.sortSalary === "Ascending") {
+        const employees = this.state.employees.sort(function (a, b) {
+          return a.salary - b.salary;
+        });
+        this.setState({ employees: employees });
+      }
+      else if (this.state.sortSalary === "Descending") {
+        const employees = this.state.employees.sort(function (a, b) {
+          return b.salary - a.salary;
+        });
+        this.setState({ employees: employees });
+      }
     });
-
-    this.setState({ employees })
   }
 
 
   render() {
     return (
       <div className="container">
-        <Row>
+        <Row format="justify-content-center mt-2">
+          <h2>Employee List</h2>
+        </Row>
+        <Row format="justify-content-center mt-2">
           <FilterDropDown
             changeDepartmentFilter={this.changeDepartmentFilter}
           />
+          <SortDropDown
+            changeSort={this.changeSort} />
         </Row>
         <Table>
           <TableHeader />

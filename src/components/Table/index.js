@@ -4,8 +4,8 @@ import Row from '../Row';
 
 function Table(props) {
     return (
-        <Row>
-            <Col size="sm-12" other="">
+        <Row format="mt-3">
+            <Col format="sm-12" other="">
                 <table className="table" {...props}></table>
             </Col>
         </Row>
