@@ -4,8 +4,8 @@ function TableHeader(props) {
     return (
         <thead>
             <tr>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
+                <th scope="col">Name</th>
+                <th scope="col">Department</th>
                 <th scope="col">Role</th>
                 <th scope="col">Salary</th>
             </tr>

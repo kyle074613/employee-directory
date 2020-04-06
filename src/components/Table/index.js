@@ -5,7 +5,7 @@ import Row from '../Row';
 function Table(props) {
     return (
         <Row>
-            <Col size="md-12" other="text-center">
+            <Col size="sm-12" other="">
                 <table className="table" {...props}></table>
             </Col>
         </Row>
